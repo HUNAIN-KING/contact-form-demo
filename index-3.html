@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Modal Contact Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #020617; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: system-ui, -apple-system, sans-serif; }
+    .modal-content { background-color: #0f172a; color: #f8fafc; border: 1px solid #1e293b; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .form-control { background-color: #020617; border-color: #334155; color: #fff; border-radius: 8px; }
+    .form-control:focus { background-color: #020617; color: #fff; border-color: #38bdf8; box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25); }
+    .btn-close-white { filter: invert(1) grayscale(100%) brightness(200%); }
+  </style>
+</head>
+<body>
+
+  <div class="text-center">
+    <h2 class="fw-bold mb-3">Have Questions?</h2>
+    <p class="text-secondary mb-4">Click below to open the interactive contact modal.</p>
+    <button type="button" class="btn btn-info btn-lg fw-bold px-4 py-3 shadow" data-bs-toggle="modal" data-bs-target="#contactModal">
+      📩 Contact Us
+    </button>
+  </div>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3 p-md-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold">Send a Quick Message</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- REPLACE YOUR_FORMSPREE_ENDPOINT BELOW -->
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <div class="mb-3">
+              <label class="form-label small text-secondary fw-semibold">Your Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Alex Smith" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-secondary fw-semibold">Email Address</label>
+              <input type="email" name="_replyto" class="form-control" placeholder="alex@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-secondary fw-semibold">Message</label>
+              <textarea name="message" class="form-control" rows="3" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-info w-100 fw-bold py-2 mt-2">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

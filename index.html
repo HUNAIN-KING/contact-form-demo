@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mininmal Dark Contact Form</title>
+
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+    .form-card { background: #1e293b; padding: 32px; border-radius: 12px; border: 1px solid #334155; width: 100%; max-width: 480px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .form-card h2 { margin-bottom: 8px; font-size: 1.5rem; color: #ffffff; }
+    .form-card p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #cbd5e1; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: #fff; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus { border-color: #38bdf8; }
+    .submit-btn { width: 100%; padding: 12px; background: #38bdf8; border: none; border-radius: 6px; color: #0f172a; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+    .submit-btn:hover { background: #7dd3fc; }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="form-card">
+        <h2>Get in Touch</h2>
+        <p>Send us a message and we will respond within 24 hours.</p>
+
+            <!-- REPLACE YOUR_FORMSPREE_ENDPOINT BELOW -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="post">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="john Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" placeholder="john@example.com" required>
+            </div>
+             <div class="form-group">
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
+             </div>
+             <button type="submit" class="submit-btn">Send Message</button>
+
+        </form>
+
+
+    </div>
+
+
+
+</body>
+</html>
